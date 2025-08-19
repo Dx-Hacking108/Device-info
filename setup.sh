@@ -22,6 +22,12 @@ else
     pkg install curl -y >/dev/null 2>&1
 fi
 clear
+if command -v jq &>/dev/null; then
+    echo ""
+else
+    pkg install jq -y >/dev/null 2>&1
+fi
+clear
 
 dxnetcheck() {
 clear
